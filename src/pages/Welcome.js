@@ -2,12 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './Welcome.module.css';
 import logo from '../img/logo.png';
+import logo1 from '../img/Logo1.png';
 
 const Welcome = () => {
   return (
     <div className={classes['main-div']}>
       <div className={classes.logoDiv}>
-        <img className={classes.logo} alt='energy live logo' src={logo} />
+        <img className={classes.logo} alt='energy live logo' src={logo1} />
       </div>
       <div className={classes.login}>
         {/*Sign in with google  */}
