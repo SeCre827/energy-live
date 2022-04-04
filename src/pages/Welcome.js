@@ -10,6 +10,7 @@ const Welcome = () => {
         <img className={classes.logo} alt='energy live logo' src={logo} />
       </div>
       <div className={classes.login}>
+        {/*Sign in with google  */}
         <Link to='/main' className={classes.loginBtn}>
           Sign in with Google
         </Link>
@@ -28,9 +29,6 @@ const Welcome = () => {
           </li>
         </ul>
       </div>
-      {/* <picture>
-          <img src={backgroundImg} className={classes.kappa} alt='Logo' />;
-        </picture> */}
     </div>
   );
 };

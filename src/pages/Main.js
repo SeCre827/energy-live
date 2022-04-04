@@ -7,12 +7,10 @@ const Main = () => {
   return (
     <div className={classes.mainGrid}>
       <div className={classes.side}>
-        {' '}
-        <SideDrawer />{' '}
+        <SideDrawer />
       </div>
       <div className={classes.mainContent}>
-        {' '}
-        <MainContent />{' '}
+        <MainContent />
       </div>
     </div>
   );

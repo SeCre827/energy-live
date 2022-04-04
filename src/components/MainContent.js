@@ -1,7 +1,36 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import classes from './MainContent.module.css';
 
 const MainContent = () => {
-  return <div>Main Content</div>;
+  return (
+    <div className={classes.mainDiv}>
+      <div className={classes.info}>
+        <span> #E-mail</span>
+        <button> Sign out </button>
+      </div>
+      <div className={classes.infoDiv}>
+        <div className={classes.loadAndCountry}>
+          <span>#Actual total Load</span>
+          <span>#country</span>
+        </div>
+        <div className={classes.chart}> chart</div>
+        <h2 className={classes.lastUpdate}> #Latest update</h2>
+        <div className={classes.helperDiv}>
+          <div className={classes.chartButtons}>
+            <button> Download Image</button>
+            <button> download data</button>
+          </div>
+          <div className={classes.finalInfo}>
+            <text>Service Status: #Live</text>
+            <text>Days Left: #27</text>
+            <Link to='/extend-plan'>Extend Plan</Link>
+            <Link to='/about'>About</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default MainContent;
