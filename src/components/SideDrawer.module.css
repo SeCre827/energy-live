@@ -20,3 +20,23 @@
   flex-grow: 10;
   background-color: #b7e0e6;
 }
+
+.infoDiv h2 {
+  font-size: 3rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.picker {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* font-size: 3rem; */
+}
+
+.picker1 {
+  flex-basis: 100%;
+  font-size: 2rem;
+}
