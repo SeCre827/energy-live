@@ -84,7 +84,7 @@
   align-self: center;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
 /* bytton shade: 6e868a */
 .submitButton button {

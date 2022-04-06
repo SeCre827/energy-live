@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import classes from './SideDrawer.module.css';
 
 // να φτιαξω ενα component option που να κανει render δυναμικα τα options me map kai tha tou pernaw ta options me ena array

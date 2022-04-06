@@ -14,7 +14,9 @@ const MainContent = () => {
           <span>#Actual total Load</span>
           <span>#country</span>
         </div>
-        <div className={classes.chart}> chart</div>
+        <div className={classes.chart}>
+          <h1>chart</h1>
+        </div>
         <h2 className={classes.lastUpdate}> #Latest update</h2>
         <div className={classes.helperDiv}>
           <div className={classes.chartButtons}>
