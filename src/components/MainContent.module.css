@@ -55,6 +55,9 @@
 }
 
 .chart {
+  padding: 1rem;
+  box-shadow: 0 1.2rem 3.6rem rgba(0, 0, 0, 0.075);
+  border-radius: 2%;
   background-color: #b7e0e6;
   flex: 0 0 58%;
 }
@@ -79,9 +82,12 @@
 }
 
 .chartButtons button {
+  background-color: #c0c6cc;
+
   font-size: 2rem;
   padding: 0.8rem;
   border-radius: 10%;
+  box-shadow: 0 0rem 1.6rem rgba(0, 0, 0, 0.075);
 }
 
 .chartButtons button:hover,

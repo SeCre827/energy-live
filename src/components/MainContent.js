@@ -22,8 +22,8 @@ const MainContent = () => {
             <button> download data</button>
           </div>
           <div className={classes.finalInfo}>
-            <text>Service Status: #Live</text>
-            <text>Days Left: #27</text>
+            <span>Service Status: #Live</span>
+            <span>Days Left: #27</span>
             <Link to='/extend-plan'>Extend Plan</Link>
             <Link to='/about'>About</Link>
           </div>

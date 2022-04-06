@@ -1,22 +1,22 @@
 import React, { useRef, useState } from 'react';
 import classes from './SideDrawer.module.css';
-import DatePicker from 'react-date-picker';
+
+// να φτιαξω ενα component option που να κανει render δυναμικα τα options me map kai tha tou pernaw ta options me ena array
+//  edw mesa na exw ena state poy tha allazei me to refresh kai tha
+// allazei to component
 
 const SideDrawer = () => {
-  const [startDate, setStartDate] = useState(new Date());
   const quantityInputRef = useRef();
   const countryInputRef = useRef();
-
-  const changeDateHandler = (date) => {
-    setStartDate(date);
-    console.log(date);
-  };
+  const startDateInputRef = useRef();
 
   function submitHandler(event) {
     event.preventDefault();
+    console.log('constructor running');
 
     const enteredQuantity = quantityInputRef.current.value;
     const enteredCountry = countryInputRef.current.value;
+    const startDate = startDateInputRef.current.value;
 
     console.log(enteredCountry);
     console.log(enteredQuantity);
@@ -27,18 +27,22 @@ const SideDrawer = () => {
     <div className={classes.mainDiv}>
       <h1> EnergyLive 2022</h1>
       <div className={classes.infoDiv}>
-        <h2>Starting Date:</h2>
+        <label htmlFor='start-date'>Starting Date:</label>
         <div className={classes.picker}>
-          <DatePicker
-            className={classes.picker1}
-            onChange={changeDateHandler}
-            value={startDate}
+          <input
+            ref={startDateInputRef}
+            type='date'
+            id='start-date'
+            name='start-date'
+            // value='2022-03-01'
+            max='2022-03-31'
+            min='2022-01-01'
           />
         </div>
         <form onSubmit={submitHandler} className={classes.form1}>
           <div className={classes.options}>
             <div>
-              <label for='quantity'>Quantity:</label>
+              <label htmlFor='quantity'>Quantity:</label>
               <br></br>
               <select name='quantity' id='quantity' ref={quantityInputRef}>
                 <option value='actualTotalLoad'>Actual total Load</option>
@@ -50,7 +54,7 @@ const SideDrawer = () => {
               <br></br>
             </div>
             <div>
-              <label for='country'>Country:</label>
+              <label htmlFor='country'>Country:</label>
               <br></br>
               <select name='country' id='country' ref={countryInputRef}>
                 <option value='a'>A</option>

@@ -3,6 +3,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+
   /* background-color: #b7e0e6; */
   /* overflow: hidden; */
 }
@@ -18,14 +19,19 @@
 
 .infoDiv {
   flex-basis: 93%;
-
   /* flex-grow: 10; */
+  /* background-color: #cfeaef; */
+
   background-color: #b7e0e6;
+  padding: 1rem;
+  box-shadow: 0 1.2rem 3.6rem rgba(0, 0, 0, 0.075);
+  border-radius: 2%;
+
   display: flex;
   flex-direction: column;
 }
 
-.infoDiv h2 {
+.infoDiv label {
   flex: 1 1 5%;
   font-size: 3rem;
   padding: 0.5rem;
@@ -33,12 +39,18 @@
 
 .picker {
   flex: 1 1 5%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  text-align: left;
+  /* display: flex; */
+
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
   /* font-size: 3rem; */
+  padding: 1rem 0;
+}
+
+.picker input {
+  font-size: 2rem;
 }
 
 .picker1 {
@@ -74,12 +86,20 @@
   flex-direction: column;
   justify-content: end;
 }
-
+/* bytton shade: 6e868a */
 .submitButton button {
   /* background-color: aliceblue; */
+  box-shadow: 0 1.2rem 3.6rem rgba(0, 0, 0, 0.075);
   font: inherit;
   font-size: 2.4rem;
   padding: 0.5rem;
   border-radius: 10%;
   margin-bottom: 0.5rem;
+  background-color: #6e868a;
+}
+
+.submitButton button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #052e34;
 }
