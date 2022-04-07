@@ -23,6 +23,7 @@ const SideDrawer = () => {
     console.log(startDate);
   }
 
+  const changehandler = () => {};
   return (
     <div className={classes.mainDiv}>
       <h1> EnergyLive 2022</h1>
