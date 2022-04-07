@@ -40,6 +40,7 @@ const SideDrawer = () => {
         <label htmlFor='start-date'>Starting Date:</label>
         <div className={classes.picker}>
           <input
+            className={classes.inputs}
             ref={startDateInputRef}
             type='date'
             id='start-date'
@@ -56,6 +57,7 @@ const SideDrawer = () => {
               <label htmlFor='quantity'>Quantity:</label>
               <br></br>
               <select
+                className={classes.inputs}
                 name='quantity'
                 id='quantity'
                 ref={quantityInputRef}
@@ -75,7 +77,12 @@ const SideDrawer = () => {
               <div>
                 <label htmlFor='country'>Country:</label>
                 <br></br>
-                <select name='country' id='country' ref={countryInputRef}>
+                <select
+                  className={classes.inputs}
+                  name='country'
+                  id='country'
+                  ref={countryInputRef}
+                >
                   <option value='a'>A</option>
                   <option value='b'>B</option>
                   <option value='c'>C</option>
@@ -88,6 +95,7 @@ const SideDrawer = () => {
                 <label htmlFor='countryFrom'>Country (from):</label>
                 <br></br>
                 <select
+                  className={classes.inputs}
                   name='countryFrom'
                   id='countryFrom'
                   ref={countryFromInputRef}
@@ -106,6 +114,7 @@ const SideDrawer = () => {
                 <label htmlFor='generationType'>Generation Type:</label>
                 <br></br>
                 <select
+                  className={classes.inputs}
                   name='generationType'
                   id='generationType'
                   ref={generationTypeInputRef}
@@ -119,7 +128,12 @@ const SideDrawer = () => {
               <div>
                 <label htmlFor='countryTo'>Country (to):</label>
                 <br></br>
-                <select name='countryTo' id='countryTo' ref={countryToInputRef}>
+                <select
+                  className={classes.inputs}
+                  name='countryTo'
+                  id='countryTo'
+                  ref={countryToInputRef}
+                >
                   <option value='a'>A</option>
                   <option value='b'>B</option>
                   <option value='c'>C</option>
