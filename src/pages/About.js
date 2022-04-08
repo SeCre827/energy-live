@@ -12,19 +12,19 @@ function About() {
             <h1 class="h1">Energy Live 2022 Creators</h1>
             <p>
               {" "}
-              <b>Αλέξανδρος Κουριδάκης:</b> el18008@mail.ntua.gr{" "}
+              <b>Αλέξανδρος Κουριδάκης:</b> <a target="_blank" rel='noopener noreferrer' href="https://webmail.ntua.gr">el18008@mail.ntua.gr{" "} </a>
             </p>
             <p>
               {" "}
-              <b>Λευτέρης Οικονόμου:</b> el17χχχ@mail.ntua.gr
+              <b>Λευτέρης Οικονόμου:</b><a target="_blank" rel='noopener noreferrer' href="https://webmail.ntua.gr">el17χχχ@mail.ntua.gr{" "} </a> 
             </p>
             <p>
               {" "}
-              <b>Βικέντιος Βιτάλης:</b> el18803@mail.ntua.gr
+              <b>Βικέντιος Βιτάλης:</b><a target="_blank" rel='noopener noreferrer' href="https://webmail.ntua.gr">el18803@mail.ntua.gr{" "} </a>  
             </p>
             <p>
               {" "}
-              <b>Στέφανος Τσώλος:</b> el18050@mail.ntua.gr
+              <b>Στέφανος Τσώλος:</b><a target="_blank" rel='noopener noreferrer' href="https://webmail.ntua.gr">el18050@mail.ntua.gr{" "} </a>  
             </p>
           </div>
         </div>

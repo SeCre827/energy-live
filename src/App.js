@@ -5,7 +5,6 @@ import ExtendPlan from './pages/ExtendPlan';
 import About from './pages/About';
 import Plans from './pages/Plans';
 import Legal from './pages/Legal';
-
 import NotFound from './pages/NotFound';
 
 function App() {
