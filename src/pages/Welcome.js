@@ -25,7 +25,8 @@ const Welcome = () => {
             <Link to='/plans'> Plans </Link>
           </li>
           <li>
-            <Link to='/legal'> Legal</Link>
+            {/* <Link to='/legal'> Legal </Link> */}
+            <a target="_blank" rel='noopener noreferrer' href="https://www.entsoe.eu/about/legal-and-regulatory/">Legal</a>  
           </li>
         </ul>
       </div>
