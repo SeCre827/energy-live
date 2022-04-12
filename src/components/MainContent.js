@@ -7,7 +7,7 @@ const MainContent = () => {
     <div className={classes.mainDiv}>
       <div className={classes.info}>
         <span> #E-mail</span>
-        <button> Sign out </button>
+        <Link to='/welcome'> Sign out </Link>
       </div>
       <div className={classes.infoDiv}>
         <div className={classes.loadAndCountry}>
