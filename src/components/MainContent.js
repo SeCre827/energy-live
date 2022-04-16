@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Chart from './Chart';
 import classes from './MainContent.module.css';
 
 const MainContent = ({token}) => {
@@ -15,7 +16,7 @@ const MainContent = ({token}) => {
           <span>#country</span>
         </div>
         <div className={classes.chart}>
-          <h1>chart</h1>
+          <Chart options={'2'} />
         </div>
         <h2 className={classes.lastUpdate}> #Latest update</h2>
         <div className={classes.helperDiv}>
