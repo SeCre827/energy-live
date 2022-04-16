@@ -3,14 +3,14 @@ import MainContent from '../components/MainContent';
 import SideDrawer from '../components/SideDrawer';
 import classes from './Main.module.css';
 
-const Main = () => {
+const Main = ({token}) => {
   return (
     <div className={classes.mainGrid}>
       <div className={classes.side}>
         <SideDrawer />
       </div>
       <div className={classes.mainContent}>
-        <MainContent />
+        <MainContent token={token}/>
       </div>
     </div>
   );
