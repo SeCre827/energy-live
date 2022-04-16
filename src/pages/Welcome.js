@@ -2,8 +2,35 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './Welcome.module.css';
 import logo from '../img/logo.png';
+import GoogleLogin from 'react-google-login';
+import { useLocation, useNavigate } from "react-router-dom";
 
-const Welcome = () => {
+const Welcome = ({ setLoginData }) => {
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleFailure = (result) => {
+    alert(result);
+  };
+
+  const handleLogin = async (googleData) => {
+    const res = await fetch('/api/energy-live', {
+      method: 'POST',
+      body: JSON.stringify({
+        token: googleData.tokenId,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const data = await res.json();
+    setLoginData(data);
+    if (location.pathname === '/welcome')
+      navigate('/');
+  };
+
   return (
     <div className={classes['main-div']}>
       <div className={classes.logoDiv}>
@@ -11,9 +38,16 @@ const Welcome = () => {
       </div>
       <div className={classes.login}>
         {/*Sign in with google  */}
-        <Link to='/main' className={classes.loginBtn}>
-          Sign in with Google
-        </Link>
+
+        <>
+          <GoogleLogin
+            clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+            buttonText="Log in with Google"
+            onSuccess={handleLogin}
+            onFailure={handleFailure}
+            cookiePolicy={'single_host_origin'}
+          ></GoogleLogin>
+        </>
       </div>
 
       <div className={classes.footer}>
@@ -26,7 +60,7 @@ const Welcome = () => {
           </li>
           <li>
             {/* <Link to='/legal'> Legal </Link> */}
-            <a target="_blank" rel='noopener noreferrer' href="https://www.entsoe.eu/about/legal-and-regulatory/">Legal</a>  
+            <a target="_blank" rel='noopener noreferrer' href="https://www.entsoe.eu/about/legal-and-regulatory/">Legal</a>
           </li>
         </ul>
       </div>
