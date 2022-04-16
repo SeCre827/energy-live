@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import Chart from './Chart';
 import classes from './MainContent.module.css';
 
-const MainContent = () => {
+const MainContent = ({token}) => {
   return (
     <div className={classes.mainDiv}>
       <div className={classes.info}>
-        <span> #E-mail</span>
+        <span> {token.email}</span>
         <Link to='/welcome'> Sign out </Link>
       </div>
       <div className={classes.infoDiv}>
