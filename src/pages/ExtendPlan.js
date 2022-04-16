@@ -122,7 +122,7 @@ const ExtendPlan = () => {
             </Button>
           </div>
           <div className={classes.cancelDiv}>
-            <Link to='/main' className={classes.cancelBtn}>
+            <Link to='/' className={classes.cancelBtn}>
               Back
             </Link>
           </div>
