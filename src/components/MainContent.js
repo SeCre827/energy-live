@@ -16,7 +16,7 @@ const MainContent = () => {
           <span>#country</span>
         </div>
         <div className={classes.chart}>
-          <Chart />
+          <Chart options={'2'} />
         </div>
         <h2 className={classes.lastUpdate}> #Latest update</h2>
         <div className={classes.helperDiv}>

@@ -3,7 +3,8 @@ import Highcharts from 'highcharts';
 // import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 
-const Chart = () => {
+const Chart = (props) => {
+  console.log(props.options);
   const options = {
     chart: {
       type: 'spline',
