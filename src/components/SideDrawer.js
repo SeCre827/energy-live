@@ -4,6 +4,55 @@ import classes from './SideDrawer.module.css';
 // να φτιαξω ενα component option που να κανει render δυναμικα τα options me map kai tha tou pernaw ta options me ena array
 //  edw mesa na exw ena state poy tha allazei me to refresh kai tha
 // allazei to component
+const CountriesJsx = (
+  <>
+    <option value='AM'>Armenia</option>
+    <option value='AZ'>Azerbaijan</option>
+    <option value='AL'>Albania</option>
+    <option value='AT'>Austria</option>
+    <option value='BY'>Belarus</option>
+    <option value='BE'>Belgium</option>
+    <option value='BA'>Bosnia Herzegovina</option>
+    <option value='BG'>Bulgaria</option>
+    <option value='HR'>Croatia</option>
+    <option value='CY'>Cyprus</option>
+    <option value='CZ'>Czech Republic</option>
+    <option value='DK'>Denmark</option>
+    <option value='EE'>Estonia</option>
+    <option value='FI'>Finland</option>
+    <option value='FR'>France</option>
+    <option value='GE'>Georgia</option>
+    <option value='DE'>Germany</option>
+    <option value='GR'>Greece</option>
+    <option value='HU'>Hungary</option>
+    <option value='IE'>Ireland</option>
+    <option value='IT'>Italy</option>
+    <option value='LV'>Latvia</option>
+    <option value='LT'>Lithuania</option>
+    <option value='LU'>Luxembourg</option>
+    <option value='MT'>Malta</option>
+    <option value='ME'>Montenegro</option>
+    <option value='NL'>Netherlands</option>
+    <option value='MK'>North Macedonia </option>
+    <option value='NO'>Norway</option>
+    <option value='PL'>Poland</option>
+    <option value='PT'>Portugal</option>
+    <option value='MD'>Republic of Moldova</option>
+    <option value='RO'>Romania</option>
+    <option value='RS'>Serbia</option>
+    <option value='SK'>Slovakia</option>
+    <option value='SI'>Slovenia</option>
+    <option value='ES'>Spain</option>
+    <option value='SE'>Sweden</option>
+    <option value='CH'>Switzerland</option>
+    <option value='TR'>Turkey</option>
+    <option value='UA'>Ukraine</option>
+    <option value='UK'>United Kingdom</option>
+    <option value='RU'>Russia</option>
+    <option value='RU'>Russia</option>
+    <option value='XK'>Kosovo</option>
+  </>
+);
 
 const SideDrawer = () => {
   const countryInputRef = useRef();
@@ -83,10 +132,7 @@ const SideDrawer = () => {
                   id='country'
                   ref={countryInputRef}
                 >
-                  <option value='a'>A</option>
-                  <option value='b'>B</option>
-                  <option value='c'>C</option>
-                  <option value='d'>D</option>
+                  {CountriesJsx}
                 </select>
               </div>
             )}
@@ -100,10 +146,7 @@ const SideDrawer = () => {
                   id='countryFrom'
                   ref={countryFromInputRef}
                 >
-                  <option value='a'>A</option>
-                  <option value='b'>B</option>
-                  <option value='c'>C</option>
-                  <option value='d'>D</option>
+                  {CountriesJsx}
                 </select>
               </div>
             )}
@@ -134,10 +177,7 @@ const SideDrawer = () => {
                   id='countryTo'
                   ref={countryToInputRef}
                 >
-                  <option value='a'>A</option>
-                  <option value='b'>B</option>
-                  <option value='c'>C</option>
-                  <option value='d'>D</option>
+                  {CountriesJsx}
                 </select>
               </div>
             )}
