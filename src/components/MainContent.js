@@ -3,7 +3,28 @@ import { Link } from 'react-router-dom';
 import Chart from './Chart';
 import classes from './MainContent.module.css';
 
-const MainContent = ({token}) => {
+const MainContent = ({ token }) => {
+  let chart;
+  const refHandler = (ref) => {
+    chart = ref;
+  };
+
+  const downloadCSV = () => {
+    if (chart && chart.current && chart.current.chart) {
+      chart.current.chart.downloadCSV();
+    }
+    // error handling
+    else console.log('You have to Chart');
+  };
+
+  const downloadImage = () => {
+    if (chart && chart.current && chart.current.chart) {
+      chart.current.chart.exportChart();
+    }
+    // error handling
+    else console.log('You have to Chart');
+  };
+
   return (
     <div className={classes.mainDiv}>
       <div className={classes.info}>
@@ -16,13 +37,13 @@ const MainContent = ({token}) => {
           <span>#country</span>
         </div>
         <div className={classes.chart}>
-          <Chart options={'2'} />
+          <Chart giveRef={refHandler} />
         </div>
         <h2 className={classes.lastUpdate}> #Latest update</h2>
         <div className={classes.helperDiv}>
           <div className={classes.chartButtons}>
-            <button> Download Image</button>
-            <button> download data</button>
+            <button onClick={downloadImage}> Download Image</button>
+            <button onClick={downloadCSV}> download data</button>
           </div>
           <div className={classes.finalInfo}>
             <span>Service Status: #Live</span>

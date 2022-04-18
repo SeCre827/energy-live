@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Highcharts from 'highcharts';
-// import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
+require('highcharts/modules/exporting')(Highcharts);
+require('highcharts/modules/export-data')(Highcharts);
+
+// import HC_exporting from 'highcharts/modules/exporting';
+// HC_exporting(Highcharts);
 
 const Chart = (props) => {
-  console.log(props.options);
+  const chart = useRef();
+
+  useEffect(() => {
+    props.giveRef(chart);
+  }, [props, chart]);
+
   const options = {
     chart: {
       type: 'spline',
@@ -19,20 +28,10 @@ const Chart = (props) => {
     ],
   };
 
-  //   const options = {
-  //     title: {
-  //       text: 'My stock chart',
-  //     },
-  //     series: [
-  //       {
-  //         data: [1, 2, 1, 4, 3, 6, 7, 3, 8, 6, 9],
-  //       },
-  //     ],
-  //   };
-
   return (
     <div>
       <HighchartsReact
+        ref={chart}
         highcharts={Highcharts}
         //   constructorType={'stockChart'}
         options={options}
@@ -42,3 +41,14 @@ const Chart = (props) => {
 };
 
 export default Chart;
+
+//   const options = {
+//     title: {
+//       text: 'My stock chart',
+//     },
+//     series: [
+//       {
+//         data: [1, 2, 1, 4, 3, 6, 7, 3, 8, 6, 9],
+//       },
+//     ],
+//   };
