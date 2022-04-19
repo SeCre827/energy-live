@@ -162,8 +162,27 @@ const SideDrawer = () => {
                   id='generationType'
                   ref={generationTypeInputRef}
                 >
-                  <option value='naturalGas'>Nautral gas</option>
-                  <option value='oil'>Oil</option>
+                  <option value='naturalGas'>Biomass</option>
+                  <option value='naturalGas'>Fossil Gas</option>
+                  <option value='naturalGas'>Fossil Brown coal/Lignite</option>
+                  <option value='naturalGas'>Fossil Hard coal</option>
+                  <option value='naturalGas'>Fossil Oil</option>
+                  <option value='naturalGas'>Fossil Coal-derived gas</option>
+                  <option value='naturalGas'>Fossil Peat</option>
+                  <option value='naturalGas'>Fossil Oil shale</option>
+                  <option value='naturalGas'>Hydro</option>
+                  <option value='naturalGas'>Nuclear</option>
+                  <option value='naturalGas'>Solar</option>
+                  <option value='naturalGas'>Waste</option>
+                  <option value='naturalGas'>Wind Onshore</option>
+                  <option value='naturalGas'>Run-of-river and poundage</option>
+                  <option value='naturalGas'>Hydro Water Reservoir</option>
+                  <option value='naturalGas'>Other</option>
+                  <option value='naturalGas'>Geothermal</option>
+                  <option value='naturalGas'>Other renewable</option>
+                  <option value='naturalGas'>Wind Offshore</option>
+                  <option value='naturalGas'>Hydro Pumped Storage</option>
+                  <option value='naturalGas'>Marine</option>
                 </select>
               </div>
             )}
