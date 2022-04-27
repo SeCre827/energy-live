@@ -4,9 +4,11 @@ import Card from '../UI/Card/Card';
 import classes from './ExtendPlan.module.css';
 import Button from '../UI/Button/Button';
 import { Link } from 'react-router-dom';
+import jwt_decode from "jwt-decode";
 
-const ExtendPlan = () => {
-  const [enteredEmail, setEnteredEmail] = useState('');
+const ExtendPlan = ({ token }) => {
+  const decodedToken = jwt_decode(token);
+  const [enteredEmail, setEnteredEmail] = useState(decodedToken.email);
   const [emailIsValid, setEmailIsValid] = useState();
 
   const extendByDaysInputRef = useRef();

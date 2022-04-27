@@ -15,18 +15,20 @@ const Welcome = ({ setLoginData }) => {
   };
 
   const handleLogin = async (googleData) => {
-    const res = await fetch('/api/energy-live', {
+    const res = await fetch('http://localhost:5000/signin', {
       method: 'POST',
       body: JSON.stringify({
         token: googleData.tokenId,
       }),
       headers: {
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin' : '*',
       },
     });
 
     const data = await res.json();
-    setLoginData(data);
+    console.log(data)
+    setLoginData(data.token);
     if (location.pathname === '/welcome')
       navigate('/');
   };

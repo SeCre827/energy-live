@@ -1,4 +1,4 @@
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useEffect } from "react";
 import Welcome from './pages/Welcome';
 import Main from './pages/Main';
@@ -8,6 +8,7 @@ import Plans from './pages/Plans';
 import Legal from './pages/Legal';
 import NotFound from './pages/NotFound';
 import useToken from './useToken';
+import jwt_decode from "jwt-decode";
 
 function App() {
   const {token, setToken} = useToken();
@@ -15,11 +16,12 @@ function App() {
   useEffect(() => {
     let tokenExpiration;
     if (token) {
+      const decodedToken = jwt_decode(token);
       const now = new Date().getTime();
-      const expiresIn = token.exp*1000 - now;
+      const expiresIn = decodedToken.exp*1000 - now;
       const clearExpiredToken = () => {
         setToken(undefined);
-        localStorage.removeItem("loginData");
+        localStorage.removeItem("token");
       }
       console.log(expiresIn)
       tokenExpiration = setTimeout(clearExpiredToken, expiresIn);
@@ -35,9 +37,9 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/'  element={token ? (<Main token={token}/>) : (<Welcome setLoginData={setToken}/>)} />
+        <Route path='/'  element={token ? (<Main token={token} setLoginData={setToken}/>) : (<Welcome setLoginData={setToken}/>)} />
         <Route path='/welcome' element={<Welcome setLoginData={setToken}/>} />
-        <Route path='/extend-plan' element={<ExtendPlan />} />
+        <Route path='/extend-plan' element={token ? (<ExtendPlan token={token}/>) : (<Welcome setLoginData={setToken}/>)} />
         <Route path='/about' element={<About />} />
         <Route path='/plans' element={<Plans />} />
         <Route path='/legal' element={<Legal />} />
